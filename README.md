@@ -130,5 +130,6 @@ WHERE Country = "London"
     order by 1
 
 12) DELETE
-    FROM customers c, orders o
-    WHERE c.customerID = o.customerID in o.orderID = null
+    delete
+    from customers
+    where customerid not in (select customerid from orders)
